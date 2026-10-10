@@ -95,4 +95,4 @@ El sitio se diseñó con el enfoque "Mobile First". Por defecto, `.tarjeta` tien
   ![Vista Escritorio Contacto](captures/escritorio-contacto.png)
 
 **Enlace de GitHub Pages (Sitio en Vivo):**
-[AQUÍ_VA_TU_LINK_DE_GITHUB_PAGES]
+[http://juanjardilaa.github.io/Proyecto_Barberia_CSS](http://juanjardilaa.github.io/Proyecto_Barberia_CSS)
