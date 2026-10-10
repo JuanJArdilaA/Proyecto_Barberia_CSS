@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precios y Reservas | El Bigote Elegante</title>
+    <meta name="description" content="Consulta nuestros precios y agenda tu cita en nuestra barbería.">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <h1 class="encabezado__titulo">El Bigote Elegante</h1>
+        <p class="encabezado__subtitulo">Precios y Reservas</p>
+        
+        <nav class="navegacion">
+            <ul class="navegacion__lista">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="contacto.html">Precios y Reservas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ================= SECCIÓN DE TABLA DE PRECIOS ================= -->
+        <section class="seccion-precios">
+            <h2>Nuestras Tarifas</h2>
+            <table class="tabla-precios">
+                <thead>
+                    <tr>
+                        <th>Servicio</th>
+                        <th>Detalle</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Corte Clásico</td>
+                        <td>A máquina o tijera</td>
+                        <td>$20.000</td>
+                    </tr>
+                    <tr>
+                        <!-- Uso de rowspan obligatorio -->
+                        <td rowspan="2">Barba</td>
+                        <td>Solo perfilado</td>
+                        <td>$10.000</td>
+                    </tr>
+                    <tr>
+                        <td>Con toalla e hidratación</td>
+                        <td>$15.000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <!-- Uso de colspan obligatorio -->
+                        <td colspan="2" class="tabla-precios__destacado">COMBO VIP (Corte + Barba hidratada + Mascarilla)</td>
+                        <td class="tabla-precios__destacado">$30.000</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <!-- ================= SECCIÓN DE FORMULARIO ================= -->
+        <section class="seccion-reservas">
+            <h2>Agenda tu Cita</h2>
+            <p>Déjanos tus datos y te confirmaremos la reserva por WhatsApp.</p>
+            
+            <form action="procesar.php" method="POST" class="formulario">
+                
+                <div class="formulario__grupo">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez">
+                </div>
+
+                <div class="formulario__grupo">
+                    <label for="telefono">Teléfono (WhatsApp):</label>
+                    <input type="tel" id="telefono" name="telefono" required placeholder="300 000 0000">
+                </div>
+
+                <div class="formulario__grupo">
+                    <label for="fecha">Fecha preferida:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+
+                <div class="formulario__grupo">
+                    <label for="mensaje">Comentarios adicionales:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿Deseas un barbero en específico o tienes alguna duda?"></textarea>
+                </div>
+
+                <button type="submit" class="boton-enviar">Solicitar Reserva</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <p>&copy; 2026 Barbería El Bigote Elegante.</p>
+        <p>Síguenos en <abbr title="Instagram">IG</abbr>: <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">@bigote_elegante</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería El Bigote Elegante | Inicio</title>
+    <meta name="description" content="La mejor barbería clásica del barrio. Cortes modernos, arreglo de barba y atención de primera.">
+    <!-- Enlace a la hoja de estilos externa -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ================= ENCABEZADO Y NAVEGACIÓN ================= -->
+    <header class="encabezado">
+        <h1 class="encabezado__titulo">El Bigote Elegante</h1>
+        <p class="encabezado__subtitulo">Tradición y estilo en cada corte</p>
+        
+        <nav class="navegacion">
+            <!-- Lista desordenada obligatoria -->
+            <ul class="navegacion__lista">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#testimonios">Opiniones</a></li>
+                <li><a href="contacto.html">Precios y Reservas</a></li> <!-- Enlace a la segunda página -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ================= SECCIÓN DE SERVICIOS ================= -->
+        <!-- Ancla destino -->
+        <section id="servicios" class="servicios">
+            <h2>Nuestros Servicios Destacados</h2>
+            
+            <div class="servicios__contenedor">
+                <!-- Tarjeta 1 -->
+                <article class="tarjeta tarjeta--promo">
+                    <img src="images/corte.jpg" alt="Hombre recibiendo un corte de cabello moderno" class="tarjeta__imagen">
+                    <h3 class="tarjeta__titulo">Corte Clásico</h3>
+                    <!-- Etiqueta s (tachado) para precio anterior y sup para superíndice -->
+                    <p class="precio">Antes: <s>$25.000</s> <strong class="precio--destacado">Ahora: $20.000<sup>COP</sup></strong></p>
+                    <p>Un corte tradicional a tijera o máquina, con acabado perfecto.</p>
+                </article>
+
+                <!-- Tarjeta 2 -->
+                <article class="tarjeta">
+                    <img src="images/barba.jpg" alt="Barbero arreglando la barba de un cliente" class="tarjeta__imagen">
+                    <h3 class="tarjeta__titulo">Arreglo de Barba</h3>
+                    <p class="precio"><strong>$15.000</strong></p>
+                    <p>Perfilado, hidratación y toalla caliente para tu comodidad.</p>
+                </article>
+
+                <!-- Tarjeta 3 -->
+                <article class="tarjeta">
+                    <img src="images/combo.jpg" alt="Cliente feliz con corte y barba" class="tarjeta__imagen">
+                    <h3 class="tarjeta__titulo">Combo VIP</h3>
+                    <p class="precio"><strong>$30.000</strong></p>
+                    <p>Corte + Barba + Mascarilla facial. <em>¡Saldrás como nuevo!</em></p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= SECCIÓN DE INFORMACIÓN Y CITAS ================= -->
+        <aside class="informacion-extra">
+            <h2>¿Cómo prepararte para tu visita?</h2>
+            <!-- Lista ordenada obligatoria -->
+            <ol class="lista-pasos">
+                <li>Reserva tu cita en nuestra página de contacto.</li>
+                <li>Llega 5 minutos antes de tu turno.</li>
+                <li>Muestra una foto de referencia si quieres un estilo nuevo.</li>
+            </ol>
+        </aside>
+
+        <section id="testimonios" class="testimonios">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <!-- Uso de blockquote y cite obligatorio -->
+            <blockquote class="testimonios__cita">
+                "Excelente atención, el mejor degradado que me han hecho en años. Muy recomendado."
+                <br>
+                <cite>- Carlos Ramírez</cite>
+            </blockquote>
+        </section>
+
+        <section class="ubicacion">
+            <h2>Cómo llegar</h2>
+            <p>Estamos ubicados a 2 cuadras del parque principal. ¡Visítanos!</p>
+            <!-- Iframe obligatorio -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15836.438253163456!2d-73.1798!3d7.0673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683f120e290f1d%3A0xc3f6087b0a88096e!2zR2lyw7NuLCBTYW50YW5kZXIsIENvbG9tYmlh!5e0!3m2!1ses!2s!4v1710000000000" 
+                width="100%" 
+                height="250" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Mapa de ubicación de la barbería en Girón">
+            </iframe>
+        </section>
+    </main>
+
+    <!-- ================= PIE DE PÁGINA ================= -->
+    <footer class="pie-pagina">
+        <p>&copy; 2026 Barbería El Bigote Elegante.</p>
+        <!-- Uso de abbr y enlace externo obligatorio -->
+        <p>Síguenos en <abbr title="Instagram">IG</abbr>: <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">@bigote_elegante</a></p>
+    </footer>
+
+</body>
+</html>

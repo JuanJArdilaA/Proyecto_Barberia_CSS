@@ -1,0 +1,254 @@
+/* ================= VARIABLES ================= */
+:root {
+    --color-fondo: #f4f4f4;
+    --color-texto: #333333;
+    /* Color con canal alfa obligatorio (negro al 80% de opacidad) */
+    --color-cabecera: rgba(0, 0, 0, 0.8);
+    --color-acento: #b38b59; /* Dorado vintage */
+    --color-blanco: #ffffff;
+    
+    --fuente-principal: 'Arial', sans-serif; /* font-family con respaldo */
+    --espaciado-basico: 1rem;
+}
+
+/* ================= RESET BÁSICO Y DOCUMENTO ================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    /* Control de texto largo obligatorio */
+    overflow-wrap: break-word; 
+}
+
+/* ================= ENCABEZADO Y NAVEGACIÓN ================= */
+.encabezado {
+    /* Fondo múltiple (gradiente + color alfa) obligatorio */
+    background: linear-gradient(135deg, var(--color-cabecera) 0%, rgba(50,50,50,0.9) 100%);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 2rem var(--espaciado-basico);
+    border-bottom: 5px solid var(--color-acento);
+}
+
+.encabezado__titulo {
+    font-size: 2.5rem;
+    letter-spacing: 2px; /* Letter-spacing obligatorio */
+    text-transform: uppercase; /* Text-transform obligatorio */
+}
+
+.navegacion {
+    margin-top: 1.5rem;
+}
+
+.navegacion__lista {
+    list-style: none;
+    padding: 0;
+}
+
+.navegacion__lista li {
+    display: inline-block; /* Sin usar flexbox, como pide el profesor */
+    margin: 0 0.5rem;
+}
+
+.navegacion__lista a {
+    color: var(--color-blanco);
+    text-decoration: none; /* Text-decoration obligatorio */
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent; /* Border obligatorio */
+    transition: all 0.3s ease;
+}
+
+/* Interacción hover obligatoria */
+.navegacion__lista a:hover,
+.navegacion__lista a:focus-visible { /* focus-visible obligatorio */
+    border-color: var(--color-acento);
+    color: var(--color-acento);
+}
+
+/* ================= COMPONENTE: TARJETAS (Servicios) ================= */
+.servicios__contenedor {
+    text-align: center;
+}
+
+.tarjeta {
+    background-color: var(--color-blanco);
+    margin: 1.5rem auto; /* margin: auto obligatorio para centrar */
+    padding: 1.5rem;
+    max-width: 300px; /* max-width obligatorio */
+    border-radius: 8px; /* border-radius obligatorio */
+    border: 1px solid #ddd;
+    overflow: hidden; /* overflow obligatorio */
+}
+
+.tarjeta__imagen {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--color-acento);
+}
+
+.tarjeta__titulo {
+    margin: 1rem 0;
+    color: var(--color-acento);
+}
+
+/* Selector Combinador (espacio) obligatorio */
+.tarjeta p {
+    color: var(--color-texto);
+}
+
+/* Selector de clase + clase para conflicto de especificidad */
+.tarjeta.tarjeta--promo .precio {
+    color: #d9534f; /* Rojo para destacar promo */
+    font-weight: bold;
+    animation: palpitar 2s infinite; /* Animación obligatoria */
+}
+
+/* ================= TABLAS Y LISTAS ================= */
+.seccion-precios, .informacion-extra {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: var(--color-blanco);
+}
+
+.tabla-precios {
+    width: 100%;
+    border-collapse: collapse; /* border-collapse obligatorio */
+    margin-top: 1rem;
+}
+
+.tabla-precios th, .tabla-precios td {
+    border: 1px solid #ccc;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+.tabla-precios th {
+    background-color: var(--color-cabecera);
+    color: var(--color-blanco);
+}
+
+.tabla-precios__destacado {
+    font-weight: bold;
+    background-color: #f9f2e8;
+}
+
+/* Pseudo-clase estructural obligatoria */
+.tabla-precios tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+/* Pseudo-elemento ::marker obligatorio */
+.lista-pasos li::marker {
+    color: var(--color-acento);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* ================= FORMULARIO ================= */
+.seccion-reservas {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--color-blanco);
+    border: 2px solid var(--color-acento);
+    border-radius: 10px;
+}
+
+.formulario__grupo {
+    margin-bottom: 1.2rem;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* Selector de atributo obligatorio */
+.formulario input[type="text"],
+.formulario input[type="tel"],
+.formulario input[type="date"],
+.formulario textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Interacción focus-within obligatoria */
+.formulario__grupo:focus-within label {
+    color: var(--color-acento);
+}
+
+.boton-enviar {
+    background-color: var(--color-acento);
+    color: var(--color-blanco);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.boton-enviar:hover {
+    background-color: #967040;
+}
+
+/* ================= PSEUDOELEMENTOS Y CITAS ================= */
+.testimonios {
+    text-align: center;
+    padding: 2rem;
+}
+
+.testimonios__cita {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555;
+    position: relative;
+    padding: 1rem;
+}
+
+/* ::before obligatorio */
+.testimonios__cita::before {
+    content: '"';
+    font-size: 3rem;
+    color: var(--color-acento);
+    position: absolute;
+    top: -10px;
+    left: -15px;
+}
+
+/* ================= ANIMACIONES ================= */
+/* @keyframes obligatorio */
+@keyframes palpitar {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* ================= RESPONSIVE DESIGN (@media obligatorio) ================= */
+/* El profesor pide que se vea bien en celular a 360px.
+   Como lo hicimos "Mobile First" y con bloques, ya se ve bien en 360px.
+   Usaremos el media query para hacerlo ver mejor en pantallas más grandes. */
+@media (min-width: 768px) {
+    .servicios__contenedor {
+        /* Simulamos columnas sin usar grid o flexbox usando inline-block */
+        text-align: center;
+    }
+    
+    .tarjeta {
+        display: inline-block;
+        vertical-align: top;
+        margin: 1rem;
+        width: 30%;
+    }
+}
