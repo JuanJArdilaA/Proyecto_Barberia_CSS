@@ -87,12 +87,12 @@ El sitio se diseñó con el enfoque "Mobile First". Por defecto, `.tarjeta` tien
 *(Recuerda subir estas imágenes a la carpeta `capturas/` de tu repositorio)*
 
 - **Vista Móvil (360px):**
-  ![Vista Móvil Inicio](capturas/movil-inicio.png)
-  ![Vista Móvil Contacto](capturas/movil-contacto.png)
+  ![Vista Móvil Inicio](captures/movil-inicio.png)
+  ![Vista Móvil Contacto](captures/movil-contacto.png)
 
 - **Vista Escritorio:**
-  ![Vista Escritorio Inicio](capturas/escritorio-inicio.png)
-  ![Vista Escritorio Contacto](capturas/escritorio-contacto.png)
+  ![Vista Escritorio Inicio](captures/escritorio-inicio.png)
+  ![Vista Escritorio Contacto](captures/escritorio-contacto.png)
 
 **Enlace de GitHub Pages (Sitio en Vivo):**
 [AQUÍ_VA_TU_LINK_DE_GITHUB_PAGES]
